@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Boceto inicial | Trazo Digital</title>
+  <meta name="description" content="El boceto inicial de la web: estructura de la página, jerarquía de contenidos y decisiones de diseño antes de usar color e imágenes.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Literata:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="boceto.css">
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+  <header class="cabecera">
+    <div class="contenedor">
+      <a class="logo" href="index.html"><img src="logo.svg" alt="" width="36" height="36"><span>Trazo Digital</span></a>
+      <nav aria-label="Principal">
+        <ul class="menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="boceto.html" aria-current="page">Boceto inicial</a></li>
+        <li><a href="landing.html">Landing page</a></li>
+        <li><a href="mapa-del-sitio.html">Mapa del sitio</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="hero hero-simple">
+      <div class="contenedor">
+        <h1>El boceto inicial</h1>
+        <p>Antes de elegir colores o tipografías, dibujamos la estructura para decidir qué va primero y qué va después.</p>
+      </div>
+    </section>
+
+    <section class="seccion">
+      <div class="contenedor boceto-layout">
+        <figure style="margin:0">
+          <div class="hoja" role="img" aria-label="Boceto de baja fidelidad: cabecera, bloque principal destacado, tres columnas, texto y pie de página">
+            <div class="b-cabecera">Cabecera y menú</div>
+            <div class="b-hero">Título principal y botón</div>
+            <div class="b-tres"><span>Contenido 1</span><span>Contenido 2</span><span>Contenido 3</span></div>
+            <div class="b-texto">Texto explicativo</div>
+            <div class="b-pie">Pie con redes y enlaces legales</div>
+          </div>
+          <figcaption class="intro">Boceto de baja fidelidad de la página principal.</figcaption>
+        </figure>
+
+        <div>
+          <h2>Decisiones del boceto</h2>
+          <ol class="notas">
+            <li><strong>Menú siempre visible.</strong> Con pocas páginas, todas caben en la cabecera.</li>
+            <li><strong>Bloque principal arriba.</strong> Dice qué es la web y ofrece la acción más importante.</li>
+            <li><strong>Tres columnas.</strong> Agrupan los contenidos clave y en móvil pasan a una sola columna.</li>
+            <li><strong>Pie de página común.</strong> Redes sociales, aviso legal y condiciones de uso en todas las páginas.</li>
+          </ol>
+          <p>Si tienes el boceto escaneado o en imagen, colócalo aquí con <code>&lt;img&gt;</code> y su texto alternativo.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <div class="pie-columnas">
+        <section>
+          <h2>Síguenos</h2>
+          <ul>
+            <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+            <li><a href="https://x.com/" target="_blank" rel="noopener noreferrer">X</a></li>
+            <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+          </ul>
+        </section>
+        <section>
+          <h2>Información legal</h2>
+          <ul>
+            <li><a href="aviso-legal.html">Aviso legal</a></li>
+            <li><a href="condiciones-de-uso.html">Condiciones de uso</a></li>
+          </ul>
+        </section>
+        <section>
+          <h2>Navegación</h2>
+          <ul>
+            <li><a href="mapa-del-sitio.html">Mapa del sitio</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </section>
+      </div>
+      <small>&copy; 2026 Trazo Digital, S.L. Todos los derechos reservados.</small>
+    </div>
+  </footer>
+</body>
+</html>

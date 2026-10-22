@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Inicio | Trazo Digital</title>
+  <meta name="description" content="Cómo se diseña una web y cómo se optimizan sus contenidos, paso a paso: boceto, maquetación en HTML y CSS, rendimiento y accesibilidad.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Literata:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+  <header class="cabecera">
+    <div class="contenedor">
+      <a class="logo" href="index.html"><img src="logo.svg" alt="" width="36" height="36"><span>Trazo Digital</span></a>
+      <nav aria-label="Principal">
+        <ul class="menu">
+        <li><a href="index.html" aria-current="page">Inicio</a></li>
+        <li><a href="boceto.html">Boceto inicial</a></li>
+        <li><a href="landing.html">Landing page</a></li>
+        <li><a href="mapa-del-sitio.html">Mapa del sitio</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="hero">
+      <div class="contenedor">
+        <h1>Del primer boceto a una web que carga rápido y se entiende</h1>
+        <p>Aquí documentamos el proceso completo de diseño y la optimización de los contenidos: qué decisiones tomamos, en qué orden y por qué.</p>
+        <div class="botones">
+          <a class="boton" href="boceto.html">Ver el boceto inicial</a>
+          <a class="boton boton-claro" href="landing.html">Ver la landing page</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="seccion" id="proceso">
+      <div class="contenedor">
+        <h2>El proceso de diseño</h2>
+        <p class="intro">Seis pasos, siempre en el mismo orden. Cada uno deja algo que el siguiente aprovecha.</p>
+        <ol class="proceso">
+          <li>
+            <h3>Definir el objetivo y el público</h3>
+            <p>Qué queremos que haga quien visita la web y qué necesita saber para decidirse.</p>
+          </li>
+          <li>
+            <h3>Organizar la información</h3>
+            <p>Hacemos un inventario de contenidos, los agrupamos y dibujamos el mapa del sitio con la jerarquía de páginas.</p>
+          </li>
+          <li>
+            <h3>Bocetar</h3>
+            <p>Primero en papel y después en wireframes de baja fidelidad, sin color ni imágenes, para decidir la estructura.</p>
+          </li>
+          <li>
+            <h3>Diseñar la interfaz</h3>
+            <p>Elegimos paleta, tipografías, rejilla y componentes (botones, tarjetas, formularios) y los usamos en todas las páginas.</p>
+          </li>
+          <li>
+            <h3>Maquetar en HTML y CSS</h3>
+            <p>HTML semántico para la estructura y hojas de estilo separadas para la presentación, adaptadas desde el móvil hasta el escritorio.</p>
+          </li>
+          <li>
+            <h3>Probar y ajustar</h3>
+            <p>Revisamos en móvil y en varios navegadores, navegamos solo con teclado y medimos la velocidad de carga.</p>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="seccion" id="contenidos">
+      <div class="contenedor">
+        <h2>La optimización de los contenidos</h2>
+        <p class="intro">Un contenido optimizado se encuentra, se lee con facilidad y pesa lo justo.</p>
+        <div class="rejilla">
+          <article class="tarjeta">
+            <h3>Texto</h3>
+            <ul>
+              <li>Una idea por párrafo.</li>
+              <li>Títulos que describen lo que viene después.</li>
+              <li>Frases cortas y verbos claros.</li>
+            </ul>
+          </article>
+          <article class="tarjeta">
+            <h3>Imágenes</h3>
+            <ul>
+              <li>Formato WebP o AVIF cuando sea posible.</li>
+              <li>Tamaño real de uso, sin subir fotos de 4000 px.</li>
+              <li>Texto alternativo en cada imagen informativa.</li>
+            </ul>
+          </article>
+          <article class="tarjeta">
+            <h3>Rendimiento</h3>
+            <ul>
+              <li>Pocas fuentes y pocos pesos de cada una.</li>
+              <li>CSS sin reglas que no se usan.</li>
+              <li>Carga diferida de lo que está fuera de pantalla.</li>
+            </ul>
+          </article>
+          <article class="tarjeta">
+            <h3>SEO y accesibilidad</h3>
+            <ul>
+              <li>Un <code>title</code> y una <code>meta description</code> por página.</li>
+              <li>Un único <code>h1</code> y encabezados en orden.</li>
+              <li>Contraste suficiente y foco visible.</li>
+            </ul>
+          </article>
+        </div>
+        <pre><code>&lt;img src="boceto.webp"
+     alt="Boceto de la página principal con cabecera, bloque central y tres columnas"
+     width="800" height="500" loading="lazy"&gt;</code></pre>
+      </div>
+    </section>
+
+    <section class="seccion" id="resultados">
+      <div class="contenedor">
+        <h2>Revisión antes de publicar</h2>
+        <p class="intro">Esta lista resume lo que comprobamos en cada página antes de darla por terminada.</p>
+        <ul class="revision">
+          <li>Cada página tiene su propio título, descripción y un único <code>h1</code>.</li>
+          <li>Todas las imágenes llevan <code>alt</code>, ancho y alto.</li>
+          <li>La web se ve bien a 360 px de ancho y a 1440 px.</li>
+          <li>Se puede navegar entero con el teclado y el foco se ve.</li>
+          <li>Los enlaces funcionan, incluidos los del pie de página.</li>
+          <li>El texto legal está enlazado desde todas las páginas.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="seccion seccion-oscura">
+      <div class="contenedor">
+        <h2>Recorre el resto de la web</h2>
+        <ul class="enlaces-paginas">
+          <li><a href="boceto.html">Boceto inicial</a></li>
+          <li><a href="landing.html">Landing page</a></li>
+          <li><a href="mapa-del-sitio.html">Mapa del sitio</a></li>
+          <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <div class="pie-columnas">
+        <section>
+          <h2>Síguenos</h2>
+          <ul>
+            <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+            <li><a href="https://x.com/" target="_blank" rel="noopener noreferrer">X</a></li>
+            <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+          </ul>
+        </section>
+        <section>
+          <h2>Información legal</h2>
+          <ul>
+            <li><a href="aviso-legal.html">Aviso legal</a></li>
+            <li><a href="condiciones-de-uso.html">Condiciones de uso</a></li>
+          </ul>
+        </section>
+        <section>
+          <h2>Navegación</h2>
+          <ul>
+            <li><a href="mapa-del-sitio.html">Mapa del sitio</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </section>
+      </div>
+      <small>&copy; 2026 Trazo Digital, S.L. Todos los derechos reservados.</small>
+    </div>
+  </footer>
+</body>
+</html>

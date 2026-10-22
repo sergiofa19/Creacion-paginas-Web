@@ -1,0 +1,107 @@
+/* ===== Variables ===== */
+:root{
+  --tinta:#0F1F3A;
+  --papel:#F4F7FA;
+  --blanco:#FFFFFF;
+  --cobalto:#2B59FF;
+  --marcador:#FFD23F;
+  --linea:#C9D3E0;
+  --suave:#4F6078;
+  --radio:6px;
+  --fuente-titulo:"Bricolage Grotesque","Trebuchet MS",Arial,sans-serif;
+  --fuente-texto:"Literata",Georgia,"Times New Roman",serif;
+}
+
+/* ===== Base ===== */
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--papel);color:var(--tinta);font-family:var(--fuente-texto);font-size:1.0625rem;line-height:1.7}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--cobalto);text-underline-offset:3px}
+a:hover{color:var(--tinta)}
+:focus-visible{outline:3px solid var(--cobalto);outline-offset:3px}
+h1,h2,h3{font-family:var(--fuente-titulo);line-height:1.15;margin:0 0 .6em;letter-spacing:-.01em}
+h1{font-size:clamp(2.2rem,5.5vw,3.9rem);font-weight:800;max-width:20ch}
+h2{font-size:clamp(1.6rem,3.2vw,2.3rem);font-weight:700}
+h3{font-size:1.2rem;font-weight:700}
+p{margin:0 0 1em;max-width:68ch}
+code{font-family:ui-monospace,Menlo,Consolas,monospace;font-size:.9em}
+.contenedor{width:min(1080px,100% - 2.5rem);margin-inline:auto}
+.saltar{position:absolute;left:-999px;top:0;background:var(--tinta);color:var(--blanco);padding:.6rem 1rem;z-index:20}
+.saltar:focus{left:0}
+
+/* ===== Cabecera ===== */
+.cabecera{background:var(--blanco);border-bottom:2px solid var(--tinta);position:sticky;top:0;z-index:10}
+.cabecera .contenedor{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:.5rem 2rem;padding-block:.8rem}
+.logo{display:inline-flex;align-items:center;gap:.6rem;font-family:var(--fuente-titulo);font-weight:800;font-size:1.3rem;color:var(--tinta);text-decoration:none}
+.logo img{flex:none}
+.menu{display:flex;flex-wrap:wrap;gap:.2rem 1.4rem;list-style:none;margin:0;padding:0}
+.menu a{font-family:var(--fuente-titulo);font-weight:600;color:var(--tinta);text-decoration:none;padding:.3rem 0;border-bottom:3px solid transparent}
+.menu a:hover{border-color:var(--linea)}
+.menu a[aria-current="page"]{border-color:var(--cobalto)}
+
+/* ===== Hero (cuadrícula de papel milimetrado) ===== */
+.hero{padding:clamp(3rem,9vw,6.5rem) 0;border-bottom:2px solid var(--tinta);
+  background-color:var(--papel);
+  background-image:linear-gradient(var(--linea) 1px,transparent 1px),linear-gradient(90deg,var(--linea) 1px,transparent 1px);
+  background-size:32px 32px}
+.hero p{font-size:1.2rem;color:var(--tinta);background:var(--papel);display:inline-block;padding:.3rem .5rem .3rem 0}
+.hero-simple{padding:clamp(2rem,6vw,4rem) 0}
+.hero-simple h1{font-size:clamp(2rem,4.5vw,3rem)}
+
+/* ===== Botones ===== */
+.botones{display:flex;flex-wrap:wrap;gap:.8rem;margin-top:1.4rem}
+.boton{display:inline-block;font-family:var(--fuente-titulo);font-weight:700;text-decoration:none;padding:.75rem 1.3rem;border:2px solid var(--tinta);border-radius:var(--radio);background:var(--cobalto);color:var(--blanco)}
+.boton:hover{background:var(--tinta);color:var(--blanco)}
+.boton-claro{background:var(--blanco);color:var(--tinta)}
+.boton-claro:hover{background:var(--marcador);color:var(--tinta)}
+
+/* ===== Secciones ===== */
+.seccion{padding:clamp(2.5rem,6vw,4.5rem) 0;border-bottom:1px solid var(--linea)}
+.seccion-oscura{background:var(--tinta);color:var(--blanco);border-bottom:0}
+.seccion-oscura a{color:var(--marcador)}
+.intro{color:var(--suave);font-size:1.1rem}
+.seccion-oscura .intro{color:#C9D3E0}
+
+/* Línea de proceso (es una secuencia real, por eso va numerada) */
+.proceso{list-style:none;margin:2rem 0 0;padding:0 0 0 3rem;position:relative;counter-reset:paso}
+.proceso::before{content:"";position:absolute;left:1.05rem;top:.5rem;bottom:.5rem;width:3px;background:var(--tinta)}
+.proceso li{position:relative;margin-bottom:1.8rem;counter-increment:paso}
+.proceso li::before{content:counter(paso);position:absolute;left:-3rem;top:0;width:2.2rem;height:2.2rem;border-radius:50%;background:var(--marcador);border:2px solid var(--tinta);font-family:var(--fuente-titulo);font-weight:800;display:grid;place-items:center}
+.proceso h3{margin-bottom:.2em}
+.proceso p{margin:0;color:var(--suave)}
+
+/* Rejilla de tarjetas */
+.rejilla{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:1.4rem;margin-top:2rem}
+.tarjeta{background:var(--blanco);border:2px solid var(--tinta);border-radius:var(--radio);padding:1.4rem}
+.tarjeta p{margin-bottom:.6em;color:var(--suave)}
+.tarjeta ul{margin:0;padding-left:1.2rem}
+
+/* Bloque de código */
+pre{background:var(--tinta);color:var(--blanco);padding:1rem 1.2rem;border-radius:var(--radio);overflow-x:auto;margin:1.5rem 0 0}
+pre code{font-size:.85rem}
+
+/* Lista de verificación */
+.revision{list-style:none;padding:0;margin:1.5rem 0 0;display:grid;gap:.6rem}
+.revision li{padding-left:2rem;position:relative}
+.revision li::before{content:"";position:absolute;left:0;top:.35em;width:1.1rem;height:1.1rem;border:2px solid var(--marcador);border-radius:3px;background:transparent}
+
+/* Enlaces a páginas */
+.enlaces-paginas{list-style:none;padding:0;margin:1.5rem 0 0;display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem}
+.enlaces-paginas a{display:block;padding:1rem 1.2rem;border:2px solid var(--marcador);border-radius:var(--radio);text-decoration:none;font-family:var(--fuente-titulo);font-weight:700}
+.enlaces-paginas a:hover{background:var(--marcador);color:var(--tinta)}
+
+/* Texto legal */
+.legal h2{margin-top:2rem;font-size:1.4rem}
+
+/* ===== Pie de página ===== */
+.pie{background:var(--tinta);color:var(--blanco);padding:2.5rem 0 1.5rem;border-top:6px solid var(--marcador)}
+.pie a{color:var(--blanco)}
+.pie a:hover{color:var(--marcador)}
+.pie-columnas{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem}
+.pie h2{font-size:1.05rem;margin-bottom:.6rem}
+.pie ul{list-style:none;margin:0;padding:0;display:grid;gap:.35rem}
+.pie small{display:block;margin-top:2rem;padding-top:1rem;border-top:1px solid #3A4B69;color:#C9D3E0}
+
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+@media (max-width:600px){.proceso{padding-left:2.6rem}.proceso li::before{left:-2.6rem}}

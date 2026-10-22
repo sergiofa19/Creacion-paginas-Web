@@ -1,0 +1,11 @@
+/* Estilos de la página del mapa del sitio */
+.arbol,.arbol ul{list-style:none;margin:0;padding:0}
+.arbol{margin-top:2rem;max-width:560px}
+.arbol > li{margin-bottom:.8rem}
+.arbol a{display:inline-block;font-family:var(--fuente-titulo);font-weight:700;text-decoration:none;background:var(--blanco);border:2px solid var(--tinta);border-radius:var(--radio);padding:.45rem .9rem}
+.arbol a:hover{background:var(--marcador);color:var(--tinta)}
+.arbol small{display:block;color:var(--suave);margin:.2rem 0 0 .2rem;font-size:.9rem}
+.arbol ul{margin:.6rem 0 0 1.4rem;padding-left:1.4rem;border-left:3px solid var(--tinta)}
+.arbol ul li{position:relative;margin-bottom:.6rem}
+.arbol ul li::before{content:"";position:absolute;left:-1.4rem;top:1.1rem;width:1.1rem;border-top:3px solid var(--tinta)}
+.arbol ul a{font-weight:600;border-color:var(--linea)}

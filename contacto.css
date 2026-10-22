@@ -1,0 +1,14 @@
+/* Estilos de la página de contacto */
+.contacto-layout{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:2.5rem;align-items:start}
+.formulario{display:grid;gap:1.1rem}
+.formulario label{display:block;font-family:var(--fuente-titulo);font-weight:600;margin-bottom:.3rem}
+.formulario input,.formulario textarea,.formulario select{width:100%;font:inherit;color:var(--tinta);background:var(--blanco);border:2px solid var(--tinta);border-radius:var(--radio);padding:.7rem .8rem}
+.formulario textarea{min-height:9rem;resize:vertical}
+.formulario input:focus,.formulario textarea:focus,.formulario select:focus{outline:3px solid var(--cobalto);outline-offset:2px}
+.formulario .aviso{font-size:.9rem;color:var(--suave)}
+.datos{background:var(--blanco);border:2px solid var(--tinta);border-radius:var(--radio);padding:1.4rem}
+.datos dl{margin:0}
+.datos dt{font-family:var(--fuente-titulo);font-weight:700;margin-top:1rem}
+.datos dt:first-child{margin-top:0}
+.datos dd{margin:0;color:var(--suave)}
+@media (max-width:820px){.contacto-layout{grid-template-columns:1fr}}

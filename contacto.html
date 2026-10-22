@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contacto | Trazo Digital</title>
+  <meta name="description" content="Contacta con nosotros mediante el formulario o a través de los datos de contacto.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;700;800&family=Literata:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="icon" href="logo.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="contacto.css">
+</head>
+<body>
+  <a class="saltar" href="#contenido">Saltar al contenido</a>
+  <header class="cabecera">
+    <div class="contenedor">
+      <a class="logo" href="index.html"><img src="logo.svg" alt="" width="36" height="36"><span>Trazo Digital</span></a>
+      <nav aria-label="Principal">
+        <ul class="menu">
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="boceto.html">Boceto inicial</a></li>
+        <li><a href="landing.html">Landing page</a></li>
+        <li><a href="mapa-del-sitio.html">Mapa del sitio</a></li>
+        <li><a href="contacto.html" aria-current="page">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main id="contenido">
+    <section class="hero hero-simple">
+      <div class="contenedor">
+        <h1>Contacto</h1>
+        <p>Cuéntanos qué necesitas y te respondemos lo antes posible.</p>
+      </div>
+    </section>
+
+    <section class="seccion">
+      <div class="contenedor contacto-layout">
+        <form class="formulario" action="#" method="post">
+          <div>
+            <label for="nombre">Nombre</label>
+            <input type="text" id="nombre" name="nombre" autocomplete="name" required>
+          </div>
+          <div>
+            <label for="email">Correo electrónico</label>
+            <input type="email" id="email" name="email" autocomplete="email" required>
+          </div>
+          <div>
+            <label for="asunto">Asunto</label>
+            <select id="asunto" name="asunto">
+              <option>Consulta general</option>
+              <option>Presupuesto</option>
+              <option>Otro</option>
+            </select>
+          </div>
+          <div>
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="mensaje" required></textarea>
+          </div>
+          <div>
+            <label><input type="checkbox" name="privacidad" required style="width:auto;margin-right:.5rem">He leído el <a href="aviso-legal.html">aviso legal</a>.</label>
+          </div>
+          <div><button class="boton" type="submit">Enviar mensaje</button></div>
+          <p class="aviso">Este formulario es solo la parte visual. Para recibir los mensajes hay que conectarlo a un servicio de envío (por ejemplo, Formspree) o a tu servidor.</p>
+        </form>
+
+        <aside class="datos">
+          <h2>Otras vías</h2>
+          <dl>
+            <dt>Correo</dt><dd><a href="mailto:hola@trazodigital.example">hola@trazodigital.example</a></dd>
+            <dt>Teléfono</dt><dd><a href="tel:+34910000000">+34 910 00 00 00</a></dd>
+            <dt>Dirección</dt><dd>Calle de la Imaginación, 12, 2.º B<br>28013 Madrid</dd>
+            <dt>Horario</dt><dd>Lunes a viernes, de 9:00 a 18:00</dd>
+          </dl>
+        </aside>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pie">
+    <div class="contenedor">
+      <div class="pie-columnas">
+        <section>
+          <h2>Síguenos</h2>
+          <ul>
+            <li><a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+            <li><a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+            <li><a href="https://x.com/" target="_blank" rel="noopener noreferrer">X</a></li>
+            <li><a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer">LinkedIn</a></li>
+            <li><a href="https://www.youtube.com/" target="_blank" rel="noopener noreferrer">YouTube</a></li>
+          </ul>
+        </section>
+        <section>
+          <h2>Información legal</h2>
+          <ul>
+            <li><a href="aviso-legal.html">Aviso legal</a></li>
+            <li><a href="condiciones-de-uso.html">Condiciones de uso</a></li>
+          </ul>
+        </section>
+        <section>
+          <h2>Navegación</h2>
+          <ul>
+            <li><a href="mapa-del-sitio.html">Mapa del sitio</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+          </ul>
+        </section>
+      </div>
+      <small>&copy; 2026 Trazo Digital, S.L. Todos los derechos reservados.</small>
+    </div>
+  </footer>
+</body>
+</html>
